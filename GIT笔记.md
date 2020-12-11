@@ -33,14 +33,27 @@
 1. git add -A  
 		# 提交的内容，-A：all，也可以用.表示
 2. git commit -m "本次提交的修改的备注"
-3. git push origin 仓库名(默认为master/main)
-		# 第一次才需要输入仓库名，后续可直接git push
-		# 代表使用上次提交的仓库
+3. git push origin 分支名(默认为master/main)
+		# 第一次才需要输入分支名，后续可直接git push
+		# 需要提交到其他的分支则填写分支名即可
 4. git pull
 		# 相当于并集，将远程仓库的内容同步至本地但并不覆盖
 		# 如果有的内容本地没有则会下载至本地
 		# 多人开发时提交之前最好使用一次
 5. git commit -am "本次提交的修改的备注"
 		# 1/2步骤合并
+```
+
+### 绑定远程仓库
+
+```markdown
+1. git init
+		# 初始化项目目录，创建一个.git文件夹，没有这个无法提交
+2. git remote -v
+		# 查看当前项目是否绑定过远程仓库，如果绑定过则无法继续绑定
+3. git remote add origin 仓库地址
+		# 绑定远程仓库
+4. git remote remove origin
+		# 解除绑定
 ```
 
